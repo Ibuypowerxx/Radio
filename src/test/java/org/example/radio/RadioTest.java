@@ -1,4 +1,5 @@
 package org.example.radio;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -13,6 +14,7 @@ public class RadioTest {
         int actual = radio.getNumberCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldMinStation() {
         Radio radio = new Radio();
@@ -22,6 +24,7 @@ public class RadioTest {
         int actual = radio.getNumberCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldMinusStation() {
         Radio radio = new Radio();
@@ -31,6 +34,7 @@ public class RadioTest {
         int actual = radio.getNumberCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldFirstStation() {
         Radio radio = new Radio();
@@ -40,6 +44,7 @@ public class RadioTest {
         int actual = radio.getNumberCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSecondStation() {
         Radio radio = new Radio();
@@ -49,6 +54,7 @@ public class RadioTest {
         int actual = radio.getNumberCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldEightStation() {
         Radio radio = new Radio();
@@ -58,6 +64,7 @@ public class RadioTest {
         int actual = radio.getNumberCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldNineStation() {
         Radio radio = new Radio();
@@ -67,6 +74,7 @@ public class RadioTest {
         int actual = radio.getNumberCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldTenStation() {
         Radio radio = new Radio();
