@@ -22,14 +22,14 @@ public class Radio {
         this.NumberCurrentStation = newNumberCurrentStation;
     }
 
-    public void setVolume(int volume) {
+    public void setVolume(int newVolume) {
         if (Volume < 0) {
             return;
         }
         if (Volume > 100) {
             return;
         }
-        this.Volume = volume;
+        this.Volume = newVolume;
     }
 
     public void increaseStation() {                           // Следующая Станция
