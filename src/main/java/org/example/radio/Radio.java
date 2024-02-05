@@ -12,16 +12,15 @@ public class Radio {
         return Volume;
     }
 
-    public void setNumberCurrentStation(int numberCurrentStation) {
-        if (NumberCurrentStation < 0) {
+    public void setNumberCurrentStation(int newNumberCurrentStation) {
+        if (newNumberCurrentStation < 0) {
             return;
         }
-        if (NumberCurrentStation > 9) {
+        if (newNumberCurrentStation > 9) {
             return;
         }
-        this.NumberCurrentStation = numberCurrentStation;
+        this.NumberCurrentStation = newNumberCurrentStation;
     }
-
 
     public void setVolume(int volume) {
         if (Volume < 0) {
