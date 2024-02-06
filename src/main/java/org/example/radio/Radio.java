@@ -23,10 +23,10 @@ public class Radio {
     }
 
     public void setVolume(int newVolume) {
-        if (Volume < 0) {
+        if (newVolume < 0) {
             return;
         }
-        if (Volume > 100) {
+        if (newVolume > 100) {
             return;
         }
         this.Volume = newVolume;
@@ -46,10 +46,11 @@ public class Radio {
         } else {
             NumberCurrentStation = 9;
         }
+
     }
 
     public void volumeUp() {                // Увеличение громкости
-        if (Volume < 10) {
+        if (Volume < 100) {
             Volume = Volume + 1;
         }
     }
