@@ -3,7 +3,20 @@ package org.example.radio;
 public class Radio {
     private int NumberCurrentStation;
     private int Volume;
+    private int maxStation;
+    private int minStation = 0;
+    private int maxVolume = 100;
+    private int minVolume = 0;
 
+    public Radio() {
+        this.maxStation = 9;
+    }
+
+    public Radio(int countStation) {
+        this.maxStation = countStation - 1;
+    }
+
+    //
     public int getNumberCurrentStation() {
         return NumberCurrentStation;
     }
@@ -13,50 +26,50 @@ public class Radio {
     }
 
     public void setNumberCurrentStation(int newNumberCurrentStation) {
-        if (newNumberCurrentStation < 0) {
+        if (newNumberCurrentStation < minStation) {
             return;
         }
-        if (newNumberCurrentStation > 9) {
+        if (newNumberCurrentStation > maxStation) {
             return;
         }
         this.NumberCurrentStation = newNumberCurrentStation;
     }
 
     public void setVolume(int newVolume) {
-        if (newVolume < 0) {
+        if (newVolume < minVolume) {
             return;
         }
-        if (newVolume > 100) {
+        if (newVolume > maxVolume) {
             return;
         }
         this.Volume = newVolume;
     }
 
     public void increaseStation() {                           // Следующая Станция
-        if (NumberCurrentStation < 9) {
+        if (NumberCurrentStation < maxStation) {
             NumberCurrentStation = NumberCurrentStation + 1;
         } else {
-            NumberCurrentStation = 0;
+            NumberCurrentStation = minStation;
         }
     }
 
     public void decreaseStation() {                          // Предыдущая станция
-        if (NumberCurrentStation > 0) {
+        if (NumberCurrentStation > minStation) {
             NumberCurrentStation = NumberCurrentStation - 1;
         } else {
-            NumberCurrentStation = 9;
+            NumberCurrentStation = maxStation;
         }
 
     }
 
     public void volumeUp() {                // Увеличение громкости
-        if (Volume < 100) {
+        if (Volume < maxVolume) {
             Volume = Volume + 1;
         }
     }
 
     public void volumeDown() {              // Уменьшение громкости
-        if (Volume > 0) {
+        if (Volume > minVolume) {
             Volume = Volume - 1;
         }
     }
